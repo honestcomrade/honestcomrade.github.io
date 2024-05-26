@@ -6,7 +6,7 @@
     </li>
   </transition-group>
 </template>
-<script>
+<script lang="ts">
 export default {
   name: 'AppProfileText',
   data() {

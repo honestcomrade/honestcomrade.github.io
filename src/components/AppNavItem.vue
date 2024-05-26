@@ -1,15 +1,13 @@
 <template>
-    <li class="nav-item-wrapper">
-      <a>{{ item.name }}</a>
-    </li>
+  <li class="nav-item-wrapper">
+    <a>{{ item.name }}</a>
+  </li>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: 'AppNavItem',
-  props: [
-    'item'
-  ]
+  props: ['item']
 }
 </script>
 
@@ -21,10 +19,12 @@ export default {
     color: #1b1d1f;
     font-weight: bold;
     &:after {
-      transition: visibility 0.3s, opacity 0.3s ease-in-out;
+      transition:
+        visibility 0.3s,
+        opacity 0.3s ease-in-out;
       visibility: visible;
       opacity: 0;
-      content: "";
+      content: '';
       display: block;
       margin: 0 auto;
       width: 50%;
@@ -39,5 +39,4 @@ export default {
     }
   }
 }
-
 </style>

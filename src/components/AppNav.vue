@@ -6,7 +6,7 @@
   </nav>
 </template>
 
-<script>
+<script lang="ts">
 // import AppNavItem from './AppNavItem';
 import AppNavItem from '/Users/joes/code/personal/src/components/AppNavItem.vue'
 export default {
