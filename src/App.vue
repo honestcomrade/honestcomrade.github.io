@@ -1,47 +1,87 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <div id="app">
+    <app-nav></app-nav>
+    <div class="main">
+      <div class="profile-wrapper">
+        <transition name="slide-fade" appear v-on:after-enter="profileListShowing = true">
+          <app-profile-pic></app-profile-pic>
+        </transition>
+        <transition name="slide-from-top">
+          <app-profile-text
+            show="profileListShowing"
+            v-show="profileListShowing"
+          ></app-profile-text>
+        </transition>
+      </div>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+    <app-footer></app-footer>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<script>
+import AppNav from './components/AppNav.vue'
+import AppFooter from './components/AppFooter.vue'
+import AppProfilePic from './components/AppProfilePic.vue'
+import AppProfileText from './components/AppProfileText.vue'
+export default {
+  name: 'app',
+  data() {
+    return {
+      profileListShowing: false
+    }
+  },
+  components: {
+    'app-nav': AppNav,
+    'app-footer': AppFooter,
+    'app-profile-pic': AppProfilePic,
+    'app-profile-text': AppProfileText
+  }
+}
+</script>
+
+<style lang="scss">
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+h1,
+h2 {
+  font-weight: normal;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.main {
+  flex: 1 0 auto;
+  padding: 58px 200px 0;
+  .slide-fade-enter-active {
+    transition: all 1s ease-out;
   }
-
-  .logo {
-    margin: 0 2rem 0 0;
+  .slide-fade-enter {
+    transform: translateX(-100%);
+    opacity: 0;
   }
-
-  header .wrapper {
+  .slide-from-top-enter-active {
+    transition: all 1s ease-out;
+  }
+  .slide-from-top-enter {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  .profile-wrapper {
+    padding: 140px 0;
+    width: 100%;
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 </style>
