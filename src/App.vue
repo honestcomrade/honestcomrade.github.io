@@ -1,33 +1,64 @@
 <script setup lang="ts">
-interface TechSkill {
+interface Skill {
   title: string;
 }
 
-const techSkills: TechSkill[] = [
-  { title: 'Modern Frontend Architecture' },
-  { title: 'Type-Safe Development' },
-  { title: 'Clean, Maintainable Code' }
+const technicalSkills: Skill[] = [
+  { title: 'Full Stack Development' },
+  { title: 'React - Vue.js' },
+  { title: 'TypeScript - C#' },
+  { title: 'System Architecture' }
+];
+
+const highlights: Skill[] = [
+  { title: '0-1 Product Development' },
+  { title: 'Technical Leadership' },
+  { title: 'Customer-Focused Solutions' },
+  { title: 'Continuous Delivery' }
 ];
 </script>
 
 <template>
   <div class="container">
     <h1>Joe Saraceno</h1>
-    <p class="subtitle">Software Engineer & Problem Solver</p>
+    <p class="subtitle">Senior Software Engineer</p>
     
     <div class="content">
-      <h2>Coming Soon</h2>
-      <p>This site is currently under development and will soon showcase my work using modern web technologies:</p>
-      <p class="tech-list">Vue 3 • TypeScript • Vite</p>
-      <p>The final version will demonstrate best practices in:</p>
-      <ul>
-        <li v-for="skill in techSkills" :key="skill.title">
-          {{ skill.title }}
-        </li>
-      </ul>
-    </div>
+      <section class="intro">
+        <p class="lead">
+          Full-stack developer specializing in modern web applications and 0-1 product development, 
+          with expertise in React, TypeScript, and C#. Focused on delivering scalable, customer-centric solutions.
+        </p>
+      </section>
 
-    <p class="coming-soon">Check back soon for the full experience!</p>
+      <section class="expertise">
+        <h2>Technical Expertise</h2>
+        <ul class="skills-list">
+          <li v-for="skill in technicalSkills" :key="skill.title">
+            {{ skill.title }}
+          </li>
+        </ul>
+      </section>
+
+      <section class="highlights">
+        <h2>Professional Highlights</h2>
+        <ul class="highlights-list">
+          <li v-for="highlight in highlights" :key="highlight.title">
+            {{ highlight.title }}
+          </li>
+        </ul>
+      </section>
+
+      <section class="current">
+        <h2>Current Focus</h2>
+        <p>
+          Building modern web applications with a focus on developer experience,
+          software quality, and continuous delivery. Leading technical initiatives
+          to improve system architecture and team productivity.
+        </p>
+        <p class="tech-list">Vue.js • TypeScript • React • Cloud Architecture</p>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -45,17 +76,32 @@ h1 {
 }
 
 .subtitle {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #666;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .content {
-  margin: 2rem 0;
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.intro {
+  margin-bottom: 3rem;
+}
+
+.lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #2c5364;
+}
+
+section {
+  margin: 2.5rem 0;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #2c5364;
   margin-bottom: 1.5rem;
 }
@@ -65,26 +111,29 @@ p {
   line-height: 1.6;
 }
 
-.tech-list {
-  font-weight: 600;
-  color: #3498db;
-}
-
-ul {
+.skills-list, .highlights-list {
   list-style: none;
   padding: 0;
   margin: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
-li {
-  margin: 0.75rem 0;
+.skills-list li, .highlights-list li {
   font-size: 1.1rem;
+  margin: 0.25rem;
 }
 
-.coming-soon {
-  font-style: italic;
-  color: #666;
-  margin-top: 2rem;
+.tech-list {
+  font-weight: 600;
+  color: #3498db;
+  margin-top: 1rem;
+}
+
+.current {
+  margin-top: 3rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -92,7 +141,11 @@ li {
     color: #64b5f6;
   }
 
-  .subtitle, .coming-soon {
+  .lead {
+    color: #64b5f6;
+  }
+
+  .subtitle {
     color: #999;
   }
 
@@ -106,10 +159,14 @@ li {
     margin-top: 1rem;
   }
   
-  .content {
+  section {
     margin: 1.5rem 0;
   }
   
+  .intro {
+    margin-bottom: 2rem;
+  }
+
   h2 {
     margin-bottom: 1rem;
   }
