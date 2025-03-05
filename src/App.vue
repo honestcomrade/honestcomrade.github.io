@@ -133,6 +133,7 @@ p {
   margin-top: 3rem;
 }
 
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
   h1, h2 {
     color: #64b5f6;
@@ -151,21 +152,70 @@ p {
   }
 }
 
-@media (max-height: 800px) {
+/* Tablet */
+@media (max-width: 768px) {
   .container {
     margin-top: 1rem;
   }
-  
-  section {
-    margin: 1.5rem 0;
+
+  h1 {
+    font-size: 2.4rem;
   }
-  
+
+  .content {
+    margin: 1.5rem auto;
+  }
+
+  section {
+    margin: 2rem 0;
+  }
+
   .intro {
     margin-bottom: 2rem;
   }
 
+  .current {
+    margin-top: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+  }
+
   h2 {
+    font-size: 1.4rem;
     margin-bottom: 1rem;
+  }
+
+  .skills-list, .highlights-list {
+    gap: 0.75rem;
+  }
+
+  .skills-list li, .highlights-list li {
+    font-size: 1rem;
+  }
+
+  section {
+    margin: 1.5rem 0;
+  }
+
+  .intro {
+    margin-bottom: 1.5rem;
+  }
+
+  .current {
+    margin-top: 1.5rem;
   }
 }
 </style>
