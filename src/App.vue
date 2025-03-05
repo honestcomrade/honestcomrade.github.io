@@ -7,13 +7,11 @@ const technicalSkills: Skill[] = [
   { title: 'Full Stack Development' },
   { title: 'React - Vue.js' },
   { title: 'TypeScript - C#' },
-  { title: 'System Architecture' }
 ];
 
 const highlights: Skill[] = [
   { title: '0-1 Product Development' },
   { title: 'Technical Leadership' },
-  { title: 'Customer-Focused Solutions' },
   { title: 'Continuous Delivery' }
 ];
 </script>
@@ -56,7 +54,6 @@ const highlights: Skill[] = [
           software quality, and continuous delivery. Leading technical initiatives
           to improve system architecture and team productivity.
         </p>
-        <p class="tech-list">Vue.js • TypeScript • React • Cloud Architecture</p>
       </section>
     </div>
   </div>
