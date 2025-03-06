@@ -17,10 +17,6 @@
 
 body {
   margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  background: var(--navy);
-  color: var(--slate);
 }
 
 #app {
@@ -47,10 +43,6 @@ body {
 @media (prefers-color-scheme: dark) {
   :root {
     color: rgba(255, 255, 255, 0.87);
-  }
-  
-  body {
-    background: linear-gradient(120deg, #2c5364 0%, #203a43 50%, #0f2027 100%);
   }
 
   #app {
