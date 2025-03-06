@@ -9,14 +9,19 @@
     { title: 'React + Vue.js' },
     { title: 'TypeScript + C#' },
     { title: 'Full Stack Development' },
-    { title: 'FHIR Integrations' }
+    { title: 'FHIR Integrations' },
+    { title: 'CI/CD' },
+    { title: 'Cloud Architecture' }
   ];
 
   const highlights: Skill[] = [
     { title: '0-1 Product Development' },
     { title: 'Technical Leadership' },
     { title: 'Continuous Delivery' },
-    { title: 'Collaboration' }
+    { title: 'Collaboration' },
+    { title: 'Agile Methodologies' },
+    { title: 'Quality Focus' }
+
   ];
 
   const socials = [
@@ -34,7 +39,7 @@
       icon: "M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z",
       url: 'mailto:josephasaraceno@gmail.com',
       label: 'Email'
-    }
+    },
   ];
 </script>
 
@@ -47,7 +52,7 @@
         </div>
         <h2 class="big-heading">Full-stack engineer crafting modern web solutions.</h2>
         <p class="lead">
-          I'm a senior software developer with a passion for building products from 0-1, with expertise in React, TypeScript, and C#. Focused on delivering scalable cloud products with nearly a decade of experience in healthcare and startups.
+          Senior software engineer with a proven track record of architecting and delivering enterprise-scale applications. Leveraging expertise in React, TypeScript, and C# to build robust, scalable solutions that drive business value. Currently leading technical initiatives and mentoring teams while maintaining a hands-on approach to development.
         </p>
         <div class="social-links">
           <Social v-for="social in socials" 
@@ -61,7 +66,7 @@
           <h3 class="section-heading">Technical Expertise</h3>
           <ul class="skills-list">
             <li v-for="skill in technicalSkills" :key="skill.title">
-              <span class="skill-bullet">—</span>{{ skill.title }}
+              <span class="skill-bullet">•</span>{{ skill.title }}
             </li>
           </ul>
         </section>
@@ -70,16 +75,15 @@
           <h3 class="section-heading">Professional Highlights</h3>
           <ul class="highlights-list">
             <li v-for="highlight in highlights" :key="highlight.title">
-              <span class="skill-bullet">—</span>{{ highlight.title }}
+              <span class="skill-bullet">•</span>{{ highlight.title }}
             </li>
           </ul>
         </section>
 
         <section class="current">
-          <h3 class="section-heading">Current Focus</h3>
+          <h3 class="section-heading">Current Work</h3>
           <p>
-            Building modern web applications with a focus on software quality, developer experience,
-            and continuous delivery. Leading technical initiatives to improve system architecture, team productivity, and customer value.
+            Building modern web applications with a focus on software quality, continuous delivery and developer experience. Leading technical initiatives to improve system architecture, team productivity, and customer value.
           </p>
         </section>
       </div>
@@ -152,8 +156,8 @@ h1 {
 }
 
 .section-heading::before {
-  content: "0" counter(section) ".";
-  counter-increment: section;
+  /* content: "0" counter(section) ".";
+  counter-increment: section; */
   margin-right: 10px;
   color: var(--green);
   font-family: monospace;
@@ -202,8 +206,8 @@ p {
 
 .skills-list li, .highlights-list li {
   position: relative;
-  margin-bottom: 6px;
-  padding-left: 12px;
+  margin-bottom: 8px;
+  padding-left: 16px;
   font-size: 0.95rem;
   color: var(--slate);
   transition: transform 0.2s ease;
@@ -218,7 +222,7 @@ p {
   position: absolute;
   left: 0;
   color: var(--green);
-  font-size: 0.4rem;
+  font-size: 0.8rem;
   line-height: 20px;
   font-weight: 400;
   opacity: 0.8;
