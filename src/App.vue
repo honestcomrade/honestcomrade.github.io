@@ -89,8 +89,10 @@
 
 <style scoped>
 .container {
-  margin-top: 2rem;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .grid {
@@ -260,7 +262,7 @@ p {
   }
 
   .container {
-    margin-top: 1.5rem;
+    padding: 1.5rem;
   }
 
   section {
@@ -293,6 +295,10 @@ p {
   .current::before {
     left: -10px;
     right: -10px;
+  }
+
+  .container {
+    padding: 1rem;
   }
 }
 
