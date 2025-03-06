@@ -202,26 +202,6 @@ p {
   opacity: 0.8;
 }
 
-.current {
-  position: relative;
-}
-
-.current::before {
-  content: '';
-  position: absolute;
-  left: -15px;
-  right: -15px;
-  top: 0;
-  bottom: 0;
-  background: var(--bright-blue);
-  border-radius: 4px;
-  z-index: -1;
-}
-.current {
-  padding: 1.5rem 0;
-  top: 0;
-}
-
 .current .section-heading,
 .current p {
   padding: 0;
