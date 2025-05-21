@@ -55,9 +55,9 @@
         <div class="name-intro">
           <h1>Joe Saraceno</h1>
         </div>
-        <h2 class="big-heading">Full-stack engineer crafting modern web solutions.</h2>
+        <h2 class="big-heading">Lead Full-stack engineer crafting modern web solutions.</h2>
         <p class="lead">
-          Senior software engineer with a proven track record of architecting and delivering enterprise-scale applications. Leveraging expertise in React, TypeScript, and C# to build robust, scalable solutions that drive business value. Currently leading technical initiatives and mentoring teams while maintaining a hands-on approach to development.
+          Dedicated software engineer with a proven track record of designing and delivering enterprise-scale applications. Leveraging expertise in React, TypeScript, and C# to build robust, scalable solutions that drive business value. Currently leading technical initiatives and mentoring teams while maintaining a hands-on approach to development.
         </p>
         <div class="social-links">
           <Social v-for="social in socials" 
@@ -91,7 +91,7 @@
         <section class="current">
           <h3 class="section-heading">Current Work</h3>
           <p>
-            Building modern web applications with a focus on automation, continuous delivery and quality. Leading technical initiatives to improve system architecture, team productivity, and customer value. Leveraging AI to delivery quickly without sacrificing quality.
+            Building modern web applications with a focus on automation, continuous delivery and quality. Leading technical projects for key business initiatives and leveraging AI to deliver quickly without sacrificing quality.
           </p>
         </section>
       </div>
