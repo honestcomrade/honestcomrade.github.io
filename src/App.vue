@@ -164,8 +164,6 @@ h1 {
 }
 
 .section-heading::before {
-  /* content: "0" counter(section) ".";
-  counter-increment: section; */
   margin-right: 10px;
   color: var(--green);
   font-family: monospace;
