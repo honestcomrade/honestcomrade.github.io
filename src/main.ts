@@ -1,5 +1,5 @@
-import { createApp } from 'vue'
+import { createApp as create } from '@vue/runtime-dom'
 import './style.css'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+create(App).mount('#app')

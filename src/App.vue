@@ -43,7 +43,7 @@
     {
       icon: "M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z",
       url: 'josephasaraceno@gmail.com',
-      label: 'Email'
+      label: 'Email',
     }
   ];
 </script>
@@ -61,11 +61,12 @@
         </p>
         <div class="social-links">
           <Social v-for="social in socials" 
-                :label="social.label"
-                :email="social.label === 'Email'"
-                :key="social.url" 
-                :url="social.url"
-                :icon="social.icon" />
+            :label="social.label"
+            :addCopyClick="social.label === 'Email'"
+            :key="social.url" 
+            :url="social.url"
+            :icon="social.icon" 
+          />
         </div>
       </div>
       <div class="right-side">
@@ -79,7 +80,7 @@
         </section>
 
         <section class="highlights">
-          <h3 class="section-heading">Professional Highlights</h3>
+          <h3 class="section-heading">Team Player</h3>
           <ul class="highlights-list">
             <li v-for="highlight in highlights" :key="highlight.title">
               <span class="skill-bullet">•</span>{{ highlight.title }}
@@ -90,7 +91,7 @@
         <section class="current">
           <h3 class="section-heading">Current Work</h3>
           <p>
-            Building modern web applications with a focus on software quality, continuous delivery and developer experience. Leading technical initiatives to improve system architecture, team productivity, and customer value.
+            Building modern web applications with a focus on automation, continuous delivery and quality. Leading technical initiatives to improve system architecture, team productivity, and customer value. Leveraging AI to delivery quickly without sacrificing quality.
           </p>
         </section>
       </div>
@@ -163,8 +164,6 @@ h1 {
 }
 
 .section-heading::before {
-  /* content: "0" counter(section) ".";
-  counter-increment: section; */
   margin-right: 10px;
   color: var(--green);
   font-family: monospace;
@@ -262,10 +261,6 @@ p {
 }
 
 @media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
 
   .left-side {
     position: relative;
@@ -291,6 +286,7 @@ p {
 }
 
 @media (max-width: 480px) {
+
   .skills-list, .highlights-list {
     grid-template-columns: 1fr;
   }
