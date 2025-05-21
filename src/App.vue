@@ -57,7 +57,7 @@
         </div>
         <h2 class="big-heading">Lead Full-stack engineer crafting modern web solutions.</h2>
         <p class="lead">
-          Dedicated software engineer with a proven track record of designing and delivering enterprise-scale applications. Leveraging expertise in React, TypeScript, and C# to build robust, scalable solutions that drive business value. Currently leading technical initiatives and mentoring teams while maintaining a hands-on approach to development.
+          Dedicated software engineer with a proven track record of designing and delivering enterprise-scale applications. Leveraging expertise in React, TypeScript, and C# to build robust, scalable solutions and drive business value. Currently leading technical initiatives and mentoring teams while maintaining a hands-on approach to development.
         </p>
         <div class="social-links">
           <Social v-for="social in socials" 

@@ -11,7 +11,7 @@ const show = () => {
   visible.value = true
   setTimeout(() => {
     visible.value = false
-  }, 1000)
+  }, 2500)
 }
 
 defineExpose({ show })
@@ -43,7 +43,7 @@ defineExpose({ show })
   border-radius: 4px;
   font-size: 14px;
   z-index: 1000;
-  animation: fadeInOut 3s ease-in-out forwards;
+  animation: fadeInOut 2.5s ease-in-out forwards;
 }
 
 @keyframes fadeInOut {
