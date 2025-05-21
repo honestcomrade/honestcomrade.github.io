@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import ShowCopied from './ShowCopied.vue'
+import ShowAction from './ShowAction.vue'
 
 const props = defineProps<{
   url: string;
@@ -9,7 +9,7 @@ const props = defineProps<{
   addCopyClick: boolean;
 }>()
 
-const showCopiedRef = ref()
+const showActionRef = ref()
 
 const handleClick = async (e: Event) => {
   e.preventDefault()
@@ -23,15 +23,31 @@ const handleClick = async (e: Event) => {
     
     document.body.removeChild(input)
     
-    showCopiedRef.value?.show()
+    showActionRef.value?.showSuccess()
   } catch (err) {
     console.error('Failed to copy:', err)
+  }
+}
+
+const handleMouseEnter = () => {
+  if (props.addCopyClick) {
+    showActionRef.value?.showHover()
+  }
+}
+
+const handleMouseLeave = () => {
+  if (props.addCopyClick) {
+    showActionRef.value?.hideHover()
   }
 }
 </script>
 
 <template>
-  <div class="social-container">
+  <div 
+    class="social-container"
+    @mouseenter="handleMouseEnter"
+    @mouseleave="handleMouseLeave"
+  >
     <span   
       v-if="addCopyClick"
       class="social-icon"
@@ -51,7 +67,11 @@ const handleClick = async (e: Event) => {
         <path :d="icon" />
       </svg>
     </a>
-    <ShowCopied :content="url" ref="showCopiedRef" />
+    <ShowAction 
+      :content="url" 
+      :hover-message="`Copy ${label}`"
+      ref="showActionRef" 
+    />
   </div>
 </template>
 
@@ -75,5 +95,4 @@ const handleClick = async (e: Event) => {
 .social-icon:hover {
   color: var(--green);
 }
-
 </style> 

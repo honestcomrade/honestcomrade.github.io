@@ -71,7 +71,7 @@
       </div>
       <div class="right-side">
         <section class="expertise">
-          <h3 class="section-heading">Technical Expertise</h3>
+          <h3 class="section-heading">Technical</h3>
           <ul class="skills-list">
             <li v-for="skill in technicalSkills" :key="skill.title">
               <span class="skill-bullet">•</span>{{ skill.title }}
@@ -80,7 +80,7 @@
         </section>
 
         <section class="highlights">
-          <h3 class="section-heading">Team Player</h3>
+          <h3 class="section-heading">Leader</h3>
           <ul class="highlights-list">
             <li v-for="highlight in highlights" :key="highlight.title">
               <span class="skill-bullet">•</span>{{ highlight.title }}
@@ -89,7 +89,7 @@
         </section>
 
         <section class="current">
-          <h3 class="section-heading">Current Work</h3>
+          <h3 class="section-heading">Work</h3>
           <p>
             Building modern web applications with a focus on automation, continuous delivery and quality. Leading technical projects for key business initiatives and leveraging AI to deliver quickly without sacrificing quality.
           </p>
@@ -366,7 +366,3 @@ p {
   font-size: clamp(24px, 4vw, 32px);
 }
 </style>
-
-
-
-
