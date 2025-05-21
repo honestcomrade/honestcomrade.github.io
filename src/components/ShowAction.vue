@@ -47,7 +47,7 @@ defineExpose({
       v-if="showSuccessTooltip"
       class="tooltip success-tooltip"
     >
-      Copied&nbsp;<b>{{ props.content }}</b>&nbsp;!
+      Copied&nbsp;<b>{{ props.content }}</b>
     </div>
   </div>
 </template>
