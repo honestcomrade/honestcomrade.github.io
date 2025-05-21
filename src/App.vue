@@ -80,7 +80,7 @@
         </section>
 
         <section class="highlights">
-          <h3 class="section-heading">Professional Highlights</h3>
+          <h3 class="section-heading">Team Player</h3>
           <ul class="highlights-list">
             <li v-for="highlight in highlights" :key="highlight.title">
               <span class="skill-bullet">•</span>{{ highlight.title }}
